@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume Builder with Skills</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Style your resume sections, fields, buttons, etc. */
+    </style>
+</head>
+<body>
+    <h1>Online Resume Builder with Skills</h1>
+    
+    <section>
+        <h2>Personal Information</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br>
+
+        <!-- Add more personal information fields here -->
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <label for="school">School/University:</label>
+        <input type="text" id="school"><br>
+
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree"><br>
+
+        <!-- Add more education fields here -->
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle"><br>
+
+        <label for="company">Company:</label>
+        <input type="text" id="company"><br>
+
+        <!-- Add more experience fields here -->
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills"><br>
+
+        <!-- Add more skills input fields here -->
+    </section>
+
+    <label for="template">Choose a Template:</label>
+    <select id="template">
+        <option value="template1">Template 1</option>
+        <option value="template2">Template 2</option>
+        <!-- Add more template options here -->
+    </select><br>
+
+    <button id="previewButton">Preview Resume</button>
+    <button id="downloadButton">Download Resume (PDF)</button>
+
+    <section id="previewSection" style="display: none;">
+        <h2>Preview</h2>
+        <!-- Display a preview of the resume here, including skills -->
+    </section>
+
+    <script>
+        // JavaScript code to handle user interactions and resume generation
+
+        const previewButton = document.getElementById('previewButton');
+        const downloadButton = document.getElementById('downloadButton');
+        const previewSection = document.getElementById('previewSection');
+
+        previewButton.addEventListener('click', function () {
+            // Generate and display a preview of the resume
+            previewSection.style.display = 'block';
+            // You can build the preview using the user's input from the form fields
+            // Include the skills section in the preview
+        });
+
+        downloadButton.addEventListener('click', function () {
+            // Generate and download the resume as a PDF
+            // You may need to use a library like jsPDF for PDF generation
+            // Include the skills section in the generated PDF
+        });
+    </script>
+</body>
+</html>
